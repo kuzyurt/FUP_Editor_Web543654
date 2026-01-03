@@ -1,0 +1,74 @@
+{
+    "nodes": [
+        { "id": 1, "type": "PUSH", "x": 40, "y": 40, "inputs": [], "state": false, "varName": "Clock", "customLabel": "CLK" },
+        { "id": 2, "type": "INPUT", "x": 40, "y": 140, "inputs": [], "state": false, "varName": "Up" },
+        { "id": 3, "type": "INPUT", "x": 40, "y": 240, "inputs": [], "state": false, "varName": "Down" },
+        
+        { "id": 4, "type": "NOT", "x": 160, "y": 240, "inputs": [false], "state": false, "varName": null, "customLabel": "inv_D" },
+        
+        { "id": 9, "type": "OR", "x": 280, "y": 100, "inputs": [false, false], "state": false, "varName": null, "customLabel": "J0_OR" },
+        { "id": 10, "type": "AND", "x": 400, "y": 80, "inputs": [false, false], "state": false, "varName": null, "customLabel": "J0" },
+        
+        { "id": 11, "type": "OR", "x": 280, "y": 180, "inputs": [false, false], "state": false, "varName": null, "customLabel": "K0_OR" },
+        { "id": 12, "type": "AND", "x": 400, "y": 160, "inputs": [false, false], "state": false, "varName": null, "customLabel": "K0" },
+        
+        { "id": 13, "type": "AND", "x": 280, "y": 260, "inputs": [false, false], "state": false, "varName": null },
+        { "id": 14, "type": "AND", "x": 400, "y": 260, "inputs": [false, false], "state": false, "varName": null, "customLabel": "J1" },
+        
+        { "id": 15, "type": "AND", "x": 280, "y": 340, "inputs": [false, false], "state": false, "varName": null },
+        { "id": 16, "type": "AND", "x": 400, "y": 340, "inputs": [false, false], "state": false, "varName": null, "customLabel": "K1" },
+
+        { "id": 5, "type": "JK", "x": 540, "y": 100, "inputs": [false, false, false], "state": false, "varName": null, "customLabel": "FF0" },
+        { "id": 6, "type": "JK", "x": 540, "y": 280, "inputs": [false, false, false], "state": false, "varName": null, "customLabel": "FF1" },
+
+        { "id": 7, "type": "NOT", "x": 640, "y": 140, "inputs": [false], "state": true, "varName": null, "customLabel": "inv_F0" },
+        { "id": 8, "type": "NOT", "x": 640, "y": 320, "inputs": [false], "state": true, "varName": null, "customLabel": "inv_F1" },
+
+        { "id": 17, "type": "OUTPUT", "x": 740, "y": 100, "inputs": [false], "state": false, "varName": "F0" },
+        { "id": 18, "type": "OUTPUT", "x": 740, "y": 280, "inputs": [false], "state": false, "varName": "F1" }
+    ],
+    "connections": [
+        { "id": 101, "from": 3, "to": 4, "inPort": 0 },
+        
+        { "id": 102, "from": 8, "to": 9, "inPort": 0 }, 
+        { "id": 103, "from": 3, "to": 9, "inPort": 1 }, 
+        { "id": 104, "from": 2, "to": 10, "inPort": 0 }, 
+        { "id": 105, "from": 9, "to": 10, "inPort": 1 }, 
+        { "id": 106, "from": 10, "to": 5, "inPort": 0 }, 
+
+        { "id": 107, "from": 6, "to": 11, "inPort": 0 }, 
+        { "id": 108, "from": 4, "to": 11, "inPort": 1 }, 
+        { "id": 109, "from": 2, "to": 12, "inPort": 0 }, 
+        { "id": 110, "from": 11, "to": 12, "inPort": 1 }, 
+        { "id": 111, "from": 12, "to": 5, "inPort": 1 }, 
+
+        { "id": 112, "from": 2, "to": 13, "inPort": 0 }, 
+        { "id": 113, "from": 4, "to": 13, "inPort": 1 }, 
+        { "id": 114, "from": 13, "to": 14, "inPort": 0 }, 
+        { "id": 115, "from": 7, "to": 14, "inPort": 1 }, 
+        { "id": 116, "from": 14, "to": 6, "inPort": 0 }, 
+
+        { "id": 117, "from": 2, "to": 15, "inPort": 0 }, 
+        { "id": 118, "from": 3, "to": 15, "inPort": 1 }, 
+        { "id": 119, "from": 15, "to": 16, "inPort": 0 }, 
+        { "id": 120, "from": 5, "to": 16, "inPort": 1 }, 
+        { "id": 121, "from": 16, "to": 6, "inPort": 1 }, 
+
+        { "id": 122, "from": 1, "to": 5, "inPort": 2, "color": "#888" }, 
+        { "id": 123, "from": 1, "to": 6, "inPort": 2, "color": "#888" }, 
+
+        { "id": 124, "from": 5, "to": 7, "inPort": 0 }, 
+        { "id": 125, "from": 6, "to": 8, "inPort": 0 }, 
+        { "id": 126, "from": 5, "to": 17, "inPort": 0 }, 
+        { "id": 127, "from": 6, "to": 18, "inPort": 0 }
+    ],
+    "variables": [
+        { "id": 1, "name": "Up", "address": "%I0.0", "dataType": "BOOL", "displayName": "Move Up", "value": false },
+        { "id": 2, "name": "Down", "address": "%I0.1", "dataType": "BOOL", "displayName": "Move Down", "value": false },
+        { "id": 3, "name": "Clock", "address": "%I0.2", "dataType": "BOOL", "displayName": "System Clock", "value": false },
+        { "id": 4, "name": "F0", "address": "%Q0.0", "dataType": "BOOL", "displayName": "State Bit 0", "value": false },
+        { "id": 5, "name": "F1", "address": "%Q0.1", "dataType": "BOOL", "displayName": "State Bit 1", "value": false }
+    ],
+    "nextId": 100,
+    "nextVarId": 10
+}

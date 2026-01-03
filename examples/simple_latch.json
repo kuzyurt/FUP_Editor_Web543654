@@ -1,0 +1,20 @@
+{
+    "nodes": [
+        { "id": 1, "type": "PUSH", "x": 60, "y": 60, "inputs": [], "state": false, "varName": "Start_Btn" },
+        { "id": 2, "type": "INPUT", "x": 60, "y": 160, "inputs": [], "state": false, "varName": "Stop_Btn" },
+        { "id": 3, "type": "SR", "x": 260, "y": 100, "inputs": [false, false], "state": false, "varName": null },
+        { "id": 4, "type": "OUTPUT", "x": 440, "y": 110, "inputs": [false], "state": false, "varName": "Motor" }
+    ],
+    "connections": [
+        { "id": 101, "from": 1, "to": 3, "inPort": 0 },
+        { "id": 102, "from": 2, "to": 3, "inPort": 1 },
+        { "id": 103, "from": 3, "to": 4, "inPort": 0 }
+    ],
+    "variables": [
+        { "id": 1, "name": "Start_Btn", "address": "%I0.0", "dataType": "BOOL", "displayName": "Start System", "value": false },
+        { "id": 2, "name": "Stop_Btn", "address": "%I0.1", "dataType": "BOOL", "displayName": "Emergency Stop", "value": false },
+        { "id": 3, "name": "Motor", "address": "%Q0.0", "dataType": "BOOL", "displayName": "Motor Coil", "value": false }
+    ],
+    "nextId": 5,
+    "nextVarId": 4
+}

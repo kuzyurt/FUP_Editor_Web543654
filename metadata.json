@@ -1,0 +1,5 @@
+{
+  "name": "OpenPLC FBD Ultimate",
+  "description": "A web-based Function Block Diagram editor and simulator for PLC logic with smart wiring and realistic component simulation.",
+  "requestFramePermissions": []
+}

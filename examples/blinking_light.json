@@ -1,0 +1,19 @@
+{
+    "nodes": [
+        { "id": 1, "type": "INPUT", "x": 60, "y": 60, "inputs": [], "state": false, "varName": "Enable" },
+        { "id": 2, "type": "NOT", "x": 260, "y": 200, "inputs": [false], "state": false, "varName": null },
+        { "id": 3, "type": "TON", "x": 260, "y": 60, "inputs": [false], "state": false, "varName": null, "props": { "preset": 1000, "acc": 0 } },
+        { "id": 4, "type": "OUTPUT", "x": 460, "y": 70, "inputs": [false], "state": false, "varName": "Light" }
+    ],
+    "connections": [
+        { "id": 101, "from": 1, "to": 3, "inPort": 0 },
+        { "id": 102, "from": 3, "to": 2, "inPort": 0 },
+        { "id": 103, "from": 3, "to": 4, "inPort": 0 }
+    ],
+    "variables": [
+        { "id": 1, "name": "Enable", "address": "%I0.0", "dataType": "BOOL", "displayName": "Master Switch", "value": false },
+        { "id": 2, "name": "Light", "address": "%Q0.0", "dataType": "BOOL", "displayName": "Blinking Output", "value": false }
+    ],
+    "nextId": 5,
+    "nextVarId": 3
+}

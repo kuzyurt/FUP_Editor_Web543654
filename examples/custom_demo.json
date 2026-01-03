@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {"id":1,"type":"INPUT","x":220,"y":120,"inputs":[],"state":true,"varName":null,"customIn":0},
+    {"id":2,"type":"PUSH","x":220,"y":180,"inputs":[],"state":false,"varName":null,"customIn":0},
+    {"id":3,"type":"SENSOR","x":220,"y":240,"inputs":[],"state":false,"varName":"X","customIn":0},
+    {"id":4,"type":"OUTPUT","x":580,"y":180,"inputs":[false],"state":false,"varName":"X","customIn":0},
+    {"id":5,"type":"AND","x":420,"y":180,"inputs":[true,false],"state":false,"varName":null,"customIn":0},
+    {"id":6,"type":"OUTPUT","x":580,"y":240,"inputs":[false],"state":false,"varName":null,"customIn":0}
+  ],
+  "connections": [
+    {"from":1,"to":5,"inPort":0,"id":1765490944367,"path":[{"x":310,"y":145},{"x":340,"y":140},{"x":360,"y":140},{"x":380,"y":140},{"x":380,"y":160},{"x":380,"y":180},{"x":380,"y":200},{"x":400,"y":200},{"x":420,"y":200}]},
+    {"from":2,"to":5,"inPort":1,"id":1765490945810,"path":[{"x":310,"y":205},{"x":340,"y":200},{"x":360,"y":200},{"x":380,"y":200},{"x":380,"y":220},{"x":400,"y":220},{"x":420,"y":220}]},
+    {"from":5,"to":4,"inPort":0,"id":1765490948369,"path":[{"x":480,"y":210},{"x":500,"y":220},{"x":520,"y":220},{"x":540,"y":220},{"x":540,"y":200},{"x":560,"y":200},{"x":580,"y":205}]},
+    {"from":3,"to":6,"inPort":0,"id":1765490957640,"path":[{"x":310,"y":265},{"x":340,"y":260},{"x":360,"y":260},{"x":380,"y":260},{"x":380,"y":280},{"x":400,"y":280},{"x":420,"y":280},{"x":440,"y":280},{"x":460,"y":280},{"x":480,"y":280},{"x":500,"y":280},{"x":520,"y":280},{"x":540,"y":280},{"x":540,"y":260},{"x":560,"y":260},{"x":580,"y":265}]}
+  ],
+  "variables": [
+    {"id":1765490928299,"name":"Start_Btn","address":"","dataType":"BOOL","displayName":"","value":false},
+    {"id":1765490928299,"name":"Stop_Btn","address":"","dataType":"BOOL","displayName":"","value":false},
+    {"id":1765490928299,"name":"Motor_Out","address":"","dataType":"BOOL","displayName":"","value":false},
+    {"id":1765490964490,"name":"X","address":"%I0.2","dataType":"BOOL","displayName":"Sensor X","value":false}
+  ],
+  "nextId":7,
+  "nextVarId":2
+}
