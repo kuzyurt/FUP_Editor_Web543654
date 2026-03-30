@@ -3,11 +3,6 @@
 ## Overview
 The FUP Editor Web project is an advanced web-based application designed for editing and managing features of the FUP (Feature Update Protocol). This comprehensive documentation provides insights into the project's features, setup instructions, and overall architecture.
 
-## Features
-- **User-Friendly Interface:** Intuitive interface for seamless navigation and editing.
-- **Real-Time Collaboration:** Multiple users can edit documents simultaneously.
-- **Version Control:** Track changes and revert to previous versions easily.
-- **Customizable Settings:** Tailor the editor according to user preferences.
 
 ## Setup Instructions
 1. **Prerequisites:** Ensure you have [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed on your machine.
@@ -26,11 +21,7 @@ The FUP Editor Web project is an advanced web-based application designed for edi
    ```
 5. **Access the application:** Open your browser and go to `http://localhost:3000`.
 
-## Architecture
-The architecture of FUP Editor Web consists of a client-server model:
-- **Frontend:** Built using React, providing a dynamic user experience.
-- **Backend:** Node.js/Express server handling API requests and database interactions.
-- **Database:** MongoDB for storing user data and editor documents.
+
 
 ## Conclusion
 FUP Editor Web is a powerful tool for managing FUPs effectively, with ongoing development for new features and enhancements.
