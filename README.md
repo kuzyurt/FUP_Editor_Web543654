@@ -1,7 +1,7 @@
 # FUP Editor Web
 
 ## Overview
-The FUP Editor Web project is an advanced web-based application designed for editing and managing features of the FUP (Feature Update Protocol). This comprehensive documentation provides insights into the project's features, setup instructions, and overall architecture.
+The FUP (FUP=FBF=Function Block Diagram) SPS / IEC 61131‑3 Editor Web project is an web-based application designed for editing and managing features of the FUP (Feature Update Protocol). This documentation provides insights into the setup instructions.
 
 
 ## Setup Instructions
